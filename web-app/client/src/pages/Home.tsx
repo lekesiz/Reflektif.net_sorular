@@ -15,6 +15,7 @@ import TestSection from "@/components/TestSection";
 import AIProfSection from "@/components/AIProfSection";
 import ProfessionExplorer from "@/components/ProfessionExplorer";
 import AIChatDemo from "@/components/AIChatDemo";
+import CorporateSection from "@/components/CorporateSection";
 
 const tabConfig = [
   { id: "riasec", label: "RIASEC", icon: Brain, accent: "#3730A3" },
@@ -338,6 +339,9 @@ export default function Home() {
 
       {/* AI Sohbet - 7+7+7 Reflektif Sorular */}
       <AIChatDemo lang={language} />
+
+      {/* Kurumsal Bilgiler */}
+      <CorporateSection lang={language} />
 
       {/* Bilimsel Temel */}
       <section className="border-t border-border/40 bg-muted/20">
