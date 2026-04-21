@@ -136,3 +136,47 @@
     font-family: "Playfair Display", Georgia, serif;
   }
 }
+
+/* Print / PDF styles */
+@media print {
+  @page {
+    margin: 1.5cm;
+    size: A4;
+  }
+
+  body {
+    font-size: 11pt;
+    line-height: 1.4;
+    color: #000 !important;
+    background: #fff !important;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+
+  .print\:hidden {
+    display: none !important;
+  }
+
+  .print\:static {
+    position: static !important;
+  }
+
+  .print\:border-b-0 {
+    border-bottom: none !important;
+  }
+
+  /* Sayfa kırılmalarını kontrol et */
+  section {
+    break-inside: avoid;
+  }
+
+  /* Sticky elemanları statik yap */
+  [class*="sticky"] {
+    position: static !important;
+  }
+
+  /* Backdrop blur kaldır */
+  [class*="backdrop-blur"] {
+    backdrop-filter: none !important;
+  }
+}
