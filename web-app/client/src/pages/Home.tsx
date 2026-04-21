@@ -12,6 +12,9 @@ import { FileText, Users, Brain, Heart, ArrowUp, Mail, MapPin, Globe, Search, Do
 import { testsData, uiStrings } from "@/data/questions";
 import type { Language } from "@/data/questions";
 import TestSection from "@/components/TestSection";
+import AIProfSection from "@/components/AIProfSection";
+import ProfessionExplorer from "@/components/ProfessionExplorer";
+import AIChatDemo from "@/components/AIChatDemo";
 
 const tabConfig = [
   { id: "riasec", label: "RIASEC", icon: Brain, accent: "#3730A3" },
@@ -327,7 +330,16 @@ export default function Home() {
         </AnimatePresence>
       </main>
 
-      {/* Bilimsel Temel Bölümü */}
+        {/* AI-Prof Detay Bölümü */}
+      <AIProfSection lang={language} />
+
+      {/* 920+ Meslek Eşleştirme Sistemi */}
+      <ProfessionExplorer lang={language} />
+
+      {/* AI Sohbet - 7+7+7 Reflektif Sorular */}
+      <AIChatDemo lang={language} />
+
+      {/* Bilimsel Temel */}
       <section className="border-t border-border/40 bg-muted/20">
         <div className="container py-12 sm:py-16 print:py-6">
           <h2 className="font-display text-2xl sm:text-3xl font-bold text-foreground mb-8 print:text-xl">
